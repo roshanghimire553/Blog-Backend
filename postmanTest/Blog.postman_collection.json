@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "42b57c39-afc4-44a0-998a-3be8b4f6e8ca",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24999037"
+	},
+	"item": [
+		{
+			"name": "CreateBlog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Citwan\",\r\n    \"description\":\"Citwan was so beautiful i saw Rhino in the road not in jungle \",\r\n    \"category\":\"Safari\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1000/api/blog/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"blog",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBlog",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1000/api/blog/6582b2c0abea788e7b378b35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"blog",
+						"6582b2c0abea788e7b378b35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindSingleBlog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1000/api/blog/6581cdf5ed526d564afacd8d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"blog",
+						"6581cdf5ed526d564afacd8d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllBlog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1000/api/blog/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"blog",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
