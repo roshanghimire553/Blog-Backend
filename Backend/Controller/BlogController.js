@@ -96,3 +96,37 @@ exports.deleteSingleBlog = async (req, res) => {
     });
   }
 };
+
+//controller for updating blog//
+exports.updateBlog = async (req, res) => {
+  try {
+    const { title, description, category } = req.body;
+    const blogId = req.params.blogId; // Assuming you have a route parameter for the blog ID
+
+    // Check if the blog with the given ID exists
+    const existingBlog = await BlogModel.findById(blogId);
+    if (!existingBlog) {
+      return res.status(404).json({
+        success: false,
+        message: "Blog not found",
+      });
+    }
+
+    existingBlog.title = title;
+    existingBlog.description = description;
+    existingBlog.category = category;
+
+    const updatedBlog = await existingBlog.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "Blog updated successfully",
+      data: updatedBlog,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};

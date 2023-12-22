@@ -63,7 +63,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:1000/api/blog/6581cdf5ed526d564afacd8d",
+					"raw": "http://localhost:1000/api/blog/65855810bcd50ef6f903fff7",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -72,7 +72,7 @@
 					"path": [
 						"api",
 						"blog",
-						"6581cdf5ed526d564afacd8d"
+						"65855810bcd50ef6f903fff7"
 					]
 				}
 			},
@@ -94,6 +94,36 @@
 						"api",
 						"blog",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBlog",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"ABC\",\r\n    \"description\":\"ABC was so beautiful i saw many himalya range \",\r\n    \"category\":\"treeking\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1000/api/blog/65855810bcd50ef6f903fff7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"blog",
+						"65855810bcd50ef6f903fff7"
 					]
 				}
 			},

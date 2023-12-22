@@ -4,6 +4,7 @@ const {
   getOneBlog,
   findAllBlog,
   deleteSingleBlog,
+  updateBlog,
 } = require("../Controller/BlogController");
 const router = express.Router();
 
@@ -20,4 +21,6 @@ router.route("/").get(findAllBlog);
 
 router.route("/:BlogId").delete(deleteSingleBlog);
 
+//route to update blog
+router.route("/:blogId").put(updateBlog);
 module.exports = router;
